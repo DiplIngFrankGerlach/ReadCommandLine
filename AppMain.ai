@@ -1,0 +1,27 @@
+
+int Main::main()
+{ 
+    var PrintfClass pfc;
+
+    var String_16 arg1;
+    var String_16 arg2;
+
+    var CommandlineArgs args;
+
+    args.getArgument(1, arg1);
+    args.getArgument(2, arg2);
+
+    var int numTemp;
+    var char tempType;
+
+    numTemp = arg1.asNumber();
+    tempType = arg2.getAt(0);
+
+    var int numArgs = args.numberOfArguments();
+
+    pfc.fstr("Number of args: $").sa(numArgs).pr();
+    pfc.fstr("numTemp: $ | tempType: $").sa(numTemp).sa(tempType).pr();
+
+
+   return 1;
+}
